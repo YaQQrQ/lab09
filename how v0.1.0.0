@@ -1,0 +1,1798 @@
+[33mtag v0.1.0.0[m
+Tagger: YaQQrQ <bari.tsapaev@gmail.com>
+Date:   Wed Apr 30 19:49:37 2025 +0000
+
+tag 0.1.0.0
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAABCgAdFiEEFSVJqbIQqNNIvZF7yNK07jZ6ZrcFAmgSfvYACgkQyNK07jZ6
+ZreaPxAAjhB9O72HpiTe3AHwr0mUInmUwYC9Vm4kkF17O5brJ1oqaWM5GrDh8a4H
+yFbJQxdm+tV0E2lAgj2G8dw9Cr84v8pe0q1nIK3/tKQtGmQDltDP9o2v1SIzlAkP
+W8bde893YBB+OK7a5NhHQWI1uSQpEKilOok1FVBcHRbW3MH0KcZVA9qXXcCnCD4Y
+I/NjL8VcVhnI0OkEV1kFr2p5FgFgJuA25Ldw6MRO3xPiKDQ7ywN4gA+mUpBleLwB
+ystEwiw7NDTQ/ADKo+It1p+KYAalC1D4vUKoEb8+qhkBq7BdqFhxBS205U9ZnMkE
+uVYO6chwOx9kHC8erYKwLm8wUmcsOhn/J0ULJU4HdAZwXLlC1I0Pf4lWGz2a9kKT
+H/bMO8vp0oBpazBpjzlsC20cqFHoCIOTsf0EeyKoLLs4K9rwGRGf2YKouhWZuQ7K
+7hM4wEDrjS1hi/1+krCCJip/b1oydjGuzbXAwq4VjXRW3qilky1fUwFbCIs1fzoH
+s/z/+bbeHuOcgFQtTapaHHjpSsEvyGin7l8EiGWtKNfsYangLiaYESJWWOFhrvdq
+lJ3Hextqos0fmpEuwQvbnueBtf3QzjV+CRtPqj4XQ8c4m+/A6QA0ynfz2SOlst7M
+Ew1Pg2ateI3N3fieJYjmQ2ixddu6WGK7FQXIPdi35CVBelHUpKE=
+=x1m/
+-----END PGP SIGNATURE-----
+
+[33mcommit 51ccb6339e3a377db46a51915431d4d32c9c7e41[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;33mtag: [m[1;33mv0.1.0.0[m[33m)[m
+Author: YaQQrQ <bari.tsapaev@gmail.com>
+Date:   Wed Apr 30 19:24:31 2025 +0000
+
+    readme
+
+[1mdiff --git a/.travis.yml.swn b/.travis.yml.swn[m
+[1mnew file mode 100644[m
+[1mindex 0000000..f53a840[m
+Binary files /dev/null and b/.travis.yml.swn differ
+[1mdiff --git a/.travis.yml.swo b/.travis.yml.swo[m
+[1mnew file mode 100644[m
+[1mindex 0000000..a7bfac2[m
+Binary files /dev/null and b/.travis.yml.swo differ
+[1mdiff --git a/CMakeLists.txt b/CMakeLists.txt[m
+[1mindex 1855c5e..36a1d95 100644[m
+[1m--- a/CMakeLists.txt[m
+[1m+++ b/CMakeLists.txt[m
+[36m@@ -2,8 +2,8 @@[m [mcmake_minimum_required(VERSION 3.14)[m
+ [m
+ include("cmake/HunterGate.cmake")[m
+ HunterGate([m
+[31m-    URL "https://github.com/cpp-pm/hunter/archive/v0.23.314.tar.gz"[m
+[31m-    SHA1 "572541b3a9e2c1ccb0c0e552f6dc12219c0d6a0b"[m
+[32m+[m[32m    URL "https://github.com/cpp-pm/hunter/archive/v0.25.8.tar.gz"[m
+[32m+[m[32m    SHA1 "26c79d587883ec910bce168e25f6ac4595f97033"[m
+     LOCAL[m
+ )[m
+ [m
+[1mdiff --git a/README.md b/README.md[m
+[1mindex b4c7603..5f4dcf9 100644[m
+[1m--- a/README.md[m
+[1m+++ b/README.md[m
+[36m@@ -1,3088 +1,587 @@[m
+ bari@ubuntu24:~$ export GITHUB_USERNAME=YaQQrQ[m
+[31m-bari@ubuntu24:~$ alias gsed=sed[m
+ bari@ubuntu24:~$ cd ${GITHUB_USERNAME}/workspace[m
+ bari@ubuntu24:~/YaQQrQ/workspace$ pushd .[m
+ ~/YaQQrQ/workspace ~/YaQQrQ/workspace[m
+ bari@ubuntu24:~/YaQQrQ/workspace$ source scripts/activate[m
+[31m-bari@ubuntu24:~/YaQQrQ/workspace$ git clone https://github.com/${GITHUB_USERNAME}/lab06 projects/lab07[m
+[31m-Cloning into 'projects/lab07'...[m
+[31m-remote: Enumerating objects: 257, done.[m
+[31m-remote: Counting objects: 100% (257/257), done.[m
+[31m-remote: Compressing objects: 100% (142/142), done.[m
+[31m-remote: Total 257 (delta 88), reused 250 (delta 84), pack-reused 0 (from 0)[m
+[31m-Receiving objects: 100% (257/257), 1.05 MiB | 1.80 MiB/s, done.[m
+[31m-Resolving deltas: 100% (88/88), done.[m
+[31m-bari@ubuntu24:~/YaQQrQ/workspace$ cd projects/lab07[m
+[31m-bari@ubuntu24:~/YaQQrQ/workspace/projects/lab07$ git remote remove origin[m
+[31m-bari@ubuntu24:~/YaQQrQ/workspace/projects/lab07$ git remote add origin https://github.com/${GITHUB_USERNAME}/lab07[m
+[31m-bari@ubuntu24:~/YaQQrQ/workspace/projects/lab07$ mkdir -p cmake[m
+[31m-bari@ubuntu24:~/YaQQrQ/workspace/projects/lab07$ wget https://raw.githubusercontent.com/cpp-pm/gate/master/cmake/HunterGate.cmake -O cmake/HunterGate.cmake[m
+[31m---2025-04-29 14:31:40--  https://raw.githubusercontent.com/cpp-pm/gate/master/cmake/HunterGate.cmake[m
+[31m-Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.110.133, 185.199.108.133, 185.199.109.133, ...[m
+[31m-Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.110.133|:443... connected.[m
+[31m-HTTP request sent, awaiting response... 200 OK[m
+[31m-Length: 17231 (17K) [text/plain][m
+[31m-Saving to: ‘cmake/HunterGate.cmake’[m
+[31m-[m
+[31m-cmake/HunterGate.cmake    100%[====================================>]  16,83K  --.-KB/s    in 0,002s  [m
+[31m-[m
+[31m-2025-04-29 14:31:40 (7,51 MB/s) - ‘cmake/HunterGate.cmake’ saved [17231/17231][m
+[31m-[m
+[31m-bari@ubuntu24:~/YaQQrQ/workspace/projects/lab07$ gsed -i '/cmake_minimum_required(VERSION 3.4)/a\[m
+[31m-> include("cmake/HunterGate.cmake")[m
+[31m-HunterGate([m
+[31m-    URL "https://github.com/cpp-pm/hunter/archive/v0.23.251.tar.gz"[m
+[31m-    SHA1 "5659b15dc0884d4b03dbd95710e6a1fa0fc3258d"[m
+[31m-)[m
+[31m-> ' CMakeLists.txt[m
+[31m-sed: -e expression #1, char 76: extra characters after command[m
+[31m-bari@ubuntu24:~/YaQQrQ/workspace/projects/lab07$ ^C[m
+[31m-bari@ubuntu24:~/YaQQrQ/workspace/projects/lab07$ gsed -i '/cmake_minimum_required(VERSION 3.4)/a \[m
+[31m-> include("cmake/HunterGate.cmake") \[m
+[31m-> HunterGate( \[m
+[31m-> URL "https://github.com/cpp-pm/hunter/archive/v0.23.251.tar.gz" \[m
+[31m-> SHA1 "5659b15dc0884d4b03dbd95710e6a1fa0fc3258d" \[m
+[31m-> )' CMakeLists.txt[m
+[31m-bari@ubuntu24:~/YaQQrQ/workspace/projects/lab07$ git rm -rf third-party/gtest[m
+[31m-rm 'third-party/gtest'[m
+[31m-bari@ubuntu24:~/YaQQrQ/workspace/projects/lab07$ gsed -i '/set(PRINT_VERSION_STRING "v\${PRINT_VERSION}")/a\[m
+[32m+[m[32mbari@ubuntu24:~/YaQQrQ/workspace$ git clone https://github.com/${GITHUB_USERNAME}/lab07 lab08[m
+[32m+[m[32mCloning into 'lab08'...[m
+[32m+[m[32mremote: Enumerating objects: 92, done.[m
+[32m+[m[32mremote: Counting objects: 100% (92/92), done.[m
+[32m+[m[32mremote: Compressing objects: 100% (53/53), done.[m
+[32m+[m[32mremote: Total 92 (delta 28), reused 89 (delta 26), pack-reused 0 (from 0)[m
+[32m+[m[32mReceiving objects: 100% (92/92), 54.63 KiB | 165.00 KiB/s, done.[m
+[32m+[m[32mResolving deltas: 100% (28/28), done.[m
+[32m+[m[32mbari@ubuntu24:~/YaQQrQ/workspace$ cd lab08[m
+[32m+[m[32mbari@ubuntu24:~/YaQQrQ/workspace/lab08$ git submodule update --init[m
+[32m+[m[32mbari@ubuntu24:~/YaQQrQ/workspace/lab08$ git remote remove origin[m
+[32m+[m[32mbari@ubuntu24:~/YaQQrQ/workspace/lab08$ git remote add origin https://github.com/${GITHUB_USERNAME}/lab08[m
+[32m+[m[32mbari@ubuntu24:~/YaQQrQ/workspace/lab08$ cat > Dockerfile <<EOF[m
+[32m+[m[32m> FROM ubuntu:18.04[m
+[32m+[m[32m> EOF[m
+[32m+[m[32mbari@ubuntu24:~/YaQQrQ/workspace/lab08$ cat >> Dockerfile <<EOF[m
+ > [m
+[31m-> hunter_add_package(GTest)[m
+[31m-> find_package(GTest CONFIG REQUIRED)[m
+[31m-> ' CMakeLists.txt[m
+[31m-sed: -e expression #1, char 54: extra characters after command[m
+[31m-bari@ubuntu24:~/YaQQrQ/workspace/projects/lab07$ gsed -i '/set(PRINT_VERSION_STRING "v\${PRINT_VERSION}")/a \[m
+[31m-> hunter_add_package(GTest) \[m
+[31m-> find_package(GTest CONFIG REQUIRED) \[m
+[31m-> ' CMakeLists.txt[m
+[31m-bari@ubuntu24:~/YaQQrQ/workspace/projects/lab07$ gsed -i 's/add_subdirectory(third-party/gtest)//' CMakeLists.txt[m
+[31m-sed: -e expression #1, char 39: unknown option to `s'[m
+[31m-bari@ubuntu24:~/YaQQrQ/workspace/projects/lab07$ gsed -i 's/add_subdirectory(third-party\/gtest)//' CMakeLists.txt[m
+[31m-bari@ubuntu24:~/YaQQrQ/workspace/projects/lab07$ gsed -i 's/gtest_main/GTest::main/' CMakeLists.txt[m
+[31m-bari@ubuntu24:~/YaQQrQ/workspace/projects/lab07$ cmake -H. -B_builds -DBUILD_TESTS=ON[m
+[31m-CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_apply_gate_settings.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_finalize.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/Hunter:34 (include)[m
+[31m-  cmake/HunterGate.cmake:540 (include)[m
+[31m-  CMakeLists.txt:4 (HunterGate)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_calculate_config_sha1.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_apply_gate_settings.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_finalize.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/Hunter:34 (include)[m
+[31m-  cmake/HunterGate.cmake:540 (include)[m
+[31m-  CMakeLists.txt:4 (HunterGate)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_lock_directory.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_calculate_config_sha1.cmake:9 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_apply_gate_settings.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_finalize.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/Hunter:34 (include)[m
+[31m-  cmake/HunterGate.cmake:540 (include)[m
+[31m-  CMakeLists.txt:4 (HunterGate)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_make_directory.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_calculate_config_sha1.cmake:10 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_apply_gate_settings.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_finalize.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/Hunter:34 (include)[m
+[31m-  cmake/HunterGate.cmake:540 (include)[m
+[31m-  CMakeLists.txt:4 (HunterGate)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_lock_directory.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_make_directory.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_calculate_config_sha1.cmake:10 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_apply_gate_settings.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_finalize.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/Hunter:34 (include)[m
+[31m-  cmake/HunterGate.cmake:540 (include)[m
+[31m-  CMakeLists.txt:4 (HunterGate)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_calculate_self.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_apply_gate_settings.cmake:9 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_finalize.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/Hunter:34 (include)[m
+[31m-  cmake/HunterGate.cmake:540 (include)[m
+[31m-  CMakeLists.txt:4 (HunterGate)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_lock_directory.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_calculate_toolchain_sha1.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_apply_gate_settings.cmake:10 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_finalize.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/Hunter:34 (include)[m
+[31m-  cmake/HunterGate.cmake:540 (include)[m
+[31m-  CMakeLists.txt:4 (HunterGate)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_make_directory.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_calculate_toolchain_sha1.cmake:6 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_apply_gate_settings.cmake:10 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_finalize.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/Hunter:34 (include)[m
+[31m-  cmake/HunterGate.cmake:540 (include)[m
+[31m-  CMakeLists.txt:4 (HunterGate)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_lock_directory.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_make_directory.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_calculate_toolchain_sha1.cmake:6 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_apply_gate_settings.cmake:10 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_finalize.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/Hunter:34 (include)[m
+[31m-  cmake/HunterGate.cmake:540 (include)[m
+[31m-  CMakeLists.txt:4 (HunterGate)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_set_config_location.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_apply_gate_settings.cmake:13 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_finalize.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/Hunter:34 (include)[m
+[31m-  cmake/HunterGate.cmake:540 (include)[m
+[31m-  CMakeLists.txt:4 (HunterGate)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_calculate_self.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_finalize.cmake:6 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/Hunter:34 (include)[m
+[31m-  cmake/HunterGate.cmake:540 (include)[m
+[31m-  CMakeLists.txt:4 (HunterGate)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_lock_directory.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_private_data.cmake:12 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/Hunter:35 (include)[m
+[31m-  cmake/HunterGate.cmake:540 (include)[m
+[31m-  CMakeLists.txt:4 (HunterGate)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_calculate_self.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_initialize.cmake:4 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/Hunter:36 (include)[m
+[31m-  cmake/HunterGate.cmake:540 (include)[m
+[31m-  CMakeLists.txt:4 (HunterGate)[m
+[31m-[m
+[31m-[m
+[31m--- The C compiler identification is GNU 13.3.0[m
+[31m--- The CXX compiler identification is GNU 13.3.0[m
+[31m--- Detecting C compiler ABI info[m
+[31m--- Detecting C compiler ABI info - done[m
+[31m--- Check for working C compiler: /usr/bin/cc - skipped[m
+[31m--- Detecting C compile features[m
+[31m--- Detecting C compile features - done[m
+[31m--- Detecting CXX compiler ABI info[m
+[31m--- Detecting CXX compiler ABI info - done[m
+[31m--- Check for working CXX compiler: /usr/bin/c++ - skipped[m
+[31m--- Detecting CXX compile features[m
+[31m--- Detecting CXX compile features - done[m
+[31m--- [hunter] Calculating Toolchain-SHA1[m
+[31m-CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-[m
+[31m-[m
+[31m--- [hunter] Calculating Config-SHA1[m
+[31m--- [hunter] HUNTER_ROOT: /home/bari/.hunter[m
+[31m--- [hunter] [ Hunter-ID: 23f1b5a | Toolchain-ID: fb15dbb | Config-ID: bf2be25 ][m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_apply_gate_settings.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_finalize.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_load_from_cache.cmake:4 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_download.cmake:22 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/projects/GTest/hunter.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:62 (include)[m
+[31m-  CMakeLists.txt:24 (hunter_add_package)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_calculate_config_sha1.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_apply_gate_settings.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_finalize.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_load_from_cache.cmake:4 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_download.cmake:22 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/projects/GTest/hunter.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:62 (include)[m
+[31m-  CMakeLists.txt:24 (hunter_add_package)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_lock_directory.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_calculate_config_sha1.cmake:9 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_apply_gate_settings.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_finalize.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_load_from_cache.cmake:4 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_download.cmake:22 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/projects/GTest/hunter.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:62 (include)[m
+[31m-  CMakeLists.txt:24 (hunter_add_package)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_make_directory.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_calculate_config_sha1.cmake:10 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_apply_gate_settings.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_finalize.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_load_from_cache.cmake:4 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_download.cmake:22 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/projects/GTest/hunter.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:62 (include)[m
+[31m-  CMakeLists.txt:24 (hunter_add_package)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_lock_directory.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_make_directory.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_calculate_config_sha1.cmake:10 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_apply_gate_settings.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_finalize.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_load_from_cache.cmake:4 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_download.cmake:22 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/projects/GTest/hunter.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:62 (include)[m
+[31m-  CMakeLists.txt:24 (hunter_add_package)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_calculate_self.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_apply_gate_settings.cmake:9 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_finalize.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_load_from_cache.cmake:4 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_download.cmake:22 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/projects/GTest/hunter.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:62 (include)[m
+[31m-  CMakeLists.txt:24 (hunter_add_package)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_lock_directory.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_calculate_toolchain_sha1.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_apply_gate_settings.cmake:10 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_finalize.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_load_from_cache.cmake:4 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_download.cmake:22 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/projects/GTest/hunter.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:62 (include)[m
+[31m-  CMakeLists.txt:24 (hunter_add_package)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_make_directory.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_calculate_toolchain_sha1.cmake:6 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_apply_gate_settings.cmake:10 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_finalize.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_load_from_cache.cmake:4 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_download.cmake:22 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/projects/GTest/hunter.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:62 (include)[m
+[31m-  CMakeLists.txt:24 (hunter_add_package)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_lock_directory.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_make_directory.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_calculate_toolchain_sha1.cmake:6 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_apply_gate_settings.cmake:10 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_finalize.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_load_from_cache.cmake:4 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_download.cmake:22 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/projects/GTest/hunter.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:62 (include)[m
+[31m-  CMakeLists.txt:24 (hunter_add_package)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_set_config_location.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_apply_gate_settings.cmake:13 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_finalize.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_load_from_cache.cmake:4 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_download.cmake:22 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/projects/GTest/hunter.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:62 (include)[m
+[31m-  CMakeLists.txt:24 (hunter_add_package)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_calculate_self.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_finalize.cmake:6 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_load_from_cache.cmake:4 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_download.cmake:22 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/projects/GTest/hunter.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:62 (include)[m
+[31m-  CMakeLists.txt:24 (hunter_add_package)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_apply_gate_settings.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_finalize.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_cache_run.cmake:6 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_load_from_cache.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_download.cmake:22 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/projects/GTest/hunter.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:62 (include)[m
+[31m-  CMakeLists.txt:24 (hunter_add_package)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_calculate_config_sha1.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_apply_gate_settings.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_finalize.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_cache_run.cmake:6 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_load_from_cache.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_download.cmake:22 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/projects/GTest/hunter.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:62 (include)[m
+[31m-  CMakeLists.txt:24 (hunter_add_package)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_lock_directory.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_calculate_config_sha1.cmake:9 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_apply_gate_settings.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_finalize.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_cache_run.cmake:6 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_load_from_cache.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_download.cmake:22 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/projects/GTest/hunter.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:62 (include)[m
+[31m-  CMakeLists.txt:24 (hunter_add_package)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_make_directory.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_calculate_config_sha1.cmake:10 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_apply_gate_settings.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_finalize.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_cache_run.cmake:6 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_load_from_cache.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_download.cmake:22 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/projects/GTest/hunter.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:62 (include)[m
+[31m-  CMakeLists.txt:24 (hunter_add_package)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_lock_directory.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_make_directory.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_calculate_config_sha1.cmake:10 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_apply_gate_settings.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_finalize.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_cache_run.cmake:6 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_load_from_cache.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_download.cmake:22 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/projects/GTest/hunter.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:62 (include)[m
+[31m-  CMakeLists.txt:24 (hunter_add_package)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_calculate_self.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_apply_gate_settings.cmake:9 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_finalize.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_cache_run.cmake:6 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_load_from_cache.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_download.cmake:22 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/projects/GTest/hunter.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:62 (include)[m
+[31m-  CMakeLists.txt:24 (hunter_add_package)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_lock_directory.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_calculate_toolchain_sha1.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_apply_gate_settings.cmake:10 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_finalize.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_cache_run.cmake:6 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_load_from_cache.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_download.cmake:22 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/projects/GTest/hunter.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:62 (include)[m
+[31m-  CMakeLists.txt:24 (hunter_add_package)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_make_directory.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_calculate_toolchain_sha1.cmake:6 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_apply_gate_settings.cmake:10 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_finalize.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_cache_run.cmake:6 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_load_from_cache.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_download.cmake:22 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/projects/GTest/hunter.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:62 (include)[m
+[31m-  CMakeLists.txt:24 (hunter_add_package)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_lock_directory.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_make_directory.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_calculate_toolchain_sha1.cmake:6 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_apply_gate_settings.cmake:10 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_finalize.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_cache_run.cmake:6 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_load_from_cache.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_download.cmake:22 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/projects/GTest/hunter.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:62 (include)[m
+[31m-  CMakeLists.txt:24 (hunter_add_package)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_set_config_location.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_apply_gate_settings.cmake:13 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_finalize.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_cache_run.cmake:6 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_load_from_cache.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_download.cmake:22 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/projects/GTest/hunter.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:62 (include)[m
+[31m-  CMakeLists.txt:24 (hunter_add_package)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_calculate_self.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_finalize.cmake:6 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_cache_run.cmake:6 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_load_from_cache.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_download.cmake:22 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/projects/GTest/hunter.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:62 (include)[m
+[31m-  CMakeLists.txt:24 (hunter_add_package)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_make_directory.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_create_cache_meta_directory.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_load_from_cache.cmake:6 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_download.cmake:22 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/projects/GTest/hunter.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:62 (include)[m
+[31m-  CMakeLists.txt:24 (hunter_add_package)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_lock_directory.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_make_directory.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_create_cache_meta_directory.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_load_from_cache.cmake:6 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_download.cmake:22 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/projects/GTest/hunter.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:62 (include)[m
+[31m-  CMakeLists.txt:24 (hunter_add_package)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_make_directory.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_create_cache_meta_directory.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_save_to_cache.cmake:4 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_download.cmake:26 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/projects/GTest/hunter.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:62 (include)[m
+[31m-  CMakeLists.txt:24 (hunter_add_package)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_lock_directory.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_make_directory.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_create_cache_meta_directory.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_save_to_cache.cmake:4 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_download.cmake:26 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/projects/GTest/hunter.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:62 (include)[m
+[31m-  CMakeLists.txt:24 (hunter_add_package)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_lock_directory.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_save_to_cache.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_download.cmake:26 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/projects/GTest/hunter.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:62 (include)[m
+[31m-  CMakeLists.txt:24 (hunter_add_package)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_make_directory.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_save_to_cache.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_download.cmake:26 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/projects/GTest/hunter.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:62 (include)[m
+[31m-  CMakeLists.txt:24 (hunter_add_package)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_lock_directory.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_make_directory.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_save_to_cache.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_download.cmake:26 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/projects/GTest/hunter.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:62 (include)[m
+[31m-  CMakeLists.txt:24 (hunter_add_package)[m
+[31m-[m
+[31m-[m
+[31m--- [hunter] GTEST_ROOT: /home/bari/.hunter/_Base/23f1b5a/fb15dbb/bf2be25/Install (ver.: 1.11.0)[m
+[31m--- Found GTest: /home/bari/.hunter/_Base/23f1b5a/fb15dbb/bf2be25/Install/lib/cmake/GTest/GTestConfig.cmake (found version "1.11.0")  [m
+[31m--- Configuring done (0.9s)[m
+[31m-CMake Error at CMakeLists.txt:64 (add_executable):[m
+[31m-  Cannot find source file:[m
+[31m-[m
+[31m-    /home/bari/YaQQrQ/workspace/projects/lab07/demo/main.cpp[m
+[31m-[m
+[31m-  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm[m
+[31m-  .ccm .cxxm .c++m .h .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90[m
+[31m-  .f95 .f03 .hip .ispc[m
+[31m-[m
+[31m-[m
+[31m-CMake Error at CMakeLists.txt:64 (add_executable):[m
+[31m-  No SOURCES given to target: demo[m
+[31m-[m
+[31m-[m
+[31m-CMake Generate step failed.  Build files cannot be regenerated correctly.[m
+[31m-bari@ubuntu24:~/YaQQrQ/workspace/projects/lab07$ mkdir -p demo[m
+[31m-bari@ubuntu24:~/YaQQrQ/workspace/projects/lab07$ touch demo/main.cpp[m
+[31m-bari@ubuntu24:~/YaQQrQ/workspace/projects/lab07$ cmake -H. -B_builds -DBUILD_TESTS=ON[m
+[31m-CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_apply_gate_settings.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_finalize.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/Hunter:34 (include)[m
+[31m-  cmake/HunterGate.cmake:540 (include)[m
+[31m-  CMakeLists.txt:4 (HunterGate)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_calculate_config_sha1.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_apply_gate_settings.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_finalize.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/Hunter:34 (include)[m
+[31m-  cmake/HunterGate.cmake:540 (include)[m
+[31m-  CMakeLists.txt:4 (HunterGate)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_lock_directory.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_calculate_config_sha1.cmake:9 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_apply_gate_settings.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_finalize.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/Hunter:34 (include)[m
+[31m-  cmake/HunterGate.cmake:540 (include)[m
+[31m-  CMakeLists.txt:4 (HunterGate)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_make_directory.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_calculate_config_sha1.cmake:10 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_apply_gate_settings.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_finalize.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/Hunter:34 (include)[m
+[31m-  cmake/HunterGate.cmake:540 (include)[m
+[31m-  CMakeLists.txt:4 (HunterGate)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_lock_directory.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_make_directory.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_calculate_config_sha1.cmake:10 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_apply_gate_settings.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_finalize.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/Hunter:34 (include)[m
+[31m-  cmake/HunterGate.cmake:540 (include)[m
+[31m-  CMakeLists.txt:4 (HunterGate)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_calculate_self.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_apply_gate_settings.cmake:9 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_finalize.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/Hunter:34 (include)[m
+[31m-  cmake/HunterGate.cmake:540 (include)[m
+[31m-  CMakeLists.txt:4 (HunterGate)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_lock_directory.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_calculate_toolchain_sha1.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_apply_gate_settings.cmake:10 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_finalize.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/Hunter:34 (include)[m
+[31m-  cmake/HunterGate.cmake:540 (include)[m
+[31m-  CMakeLists.txt:4 (HunterGate)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_make_directory.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_calculate_toolchain_sha1.cmake:6 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_apply_gate_settings.cmake:10 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_finalize.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/Hunter:34 (include)[m
+[31m-  cmake/HunterGate.cmake:540 (include)[m
+[31m-  CMakeLists.txt:4 (HunterGate)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_lock_directory.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_make_directory.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_calculate_toolchain_sha1.cmake:6 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_apply_gate_settings.cmake:10 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_finalize.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/Hunter:34 (include)[m
+[31m-  cmake/HunterGate.cmake:540 (include)[m
+[31m-  CMakeLists.txt:4 (HunterGate)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_set_config_location.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_apply_gate_settings.cmake:13 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_finalize.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/Hunter:34 (include)[m
+[31m-  cmake/HunterGate.cmake:540 (include)[m
+[31m-  CMakeLists.txt:4 (HunterGate)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_calculate_self.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_finalize.cmake:6 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/Hunter:34 (include)[m
+[31m-  cmake/HunterGate.cmake:540 (include)[m
+[31m-  CMakeLists.txt:4 (HunterGate)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_lock_directory.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_private_data.cmake:12 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/Hunter:35 (include)[m
+[31m-  cmake/HunterGate.cmake:540 (include)[m
+[31m-  CMakeLists.txt:4 (HunterGate)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_calculate_self.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_initialize.cmake:4 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/Hunter:36 (include)[m
+[31m-  cmake/HunterGate.cmake:540 (include)[m
+[31m-  CMakeLists.txt:4 (HunterGate)[m
+[31m-[m
+[31m-[m
+[31m--- [hunter] Calculating Toolchain-SHA1[m
+[31m-CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-[m
+[31m-[m
+[31m--- [hunter] Calculating Config-SHA1[m
+[31m--- [hunter] HUNTER_ROOT: /home/bari/.hunter[m
+[31m--- [hunter] [ Hunter-ID: 23f1b5a | Toolchain-ID: fb15dbb | Config-ID: bf2be25 ][m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_apply_gate_settings.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_finalize.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_load_from_cache.cmake:4 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_download.cmake:22 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/projects/GTest/hunter.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:62 (include)[m
+[31m-  CMakeLists.txt:24 (hunter_add_package)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_calculate_config_sha1.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_apply_gate_settings.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_finalize.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_load_from_cache.cmake:4 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_download.cmake:22 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/projects/GTest/hunter.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:62 (include)[m
+[31m-  CMakeLists.txt:24 (hunter_add_package)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_lock_directory.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_calculate_config_sha1.cmake:9 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_apply_gate_settings.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_finalize.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_load_from_cache.cmake:4 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_download.cmake:22 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/projects/GTest/hunter.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:62 (include)[m
+[31m-  CMakeLists.txt:24 (hunter_add_package)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_make_directory.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_calculate_config_sha1.cmake:10 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_apply_gate_settings.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_finalize.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_load_from_cache.cmake:4 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_download.cmake:22 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/projects/GTest/hunter.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:62 (include)[m
+[31m-  CMakeLists.txt:24 (hunter_add_package)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_lock_directory.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_make_directory.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_calculate_config_sha1.cmake:10 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_apply_gate_settings.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_finalize.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_load_from_cache.cmake:4 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_download.cmake:22 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/projects/GTest/hunter.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:62 (include)[m
+[31m-  CMakeLists.txt:24 (hunter_add_package)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_calculate_self.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_apply_gate_settings.cmake:9 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_finalize.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_load_from_cache.cmake:4 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_download.cmake:22 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/projects/GTest/hunter.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:62 (include)[m
+[31m-  CMakeLists.txt:24 (hunter_add_package)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_lock_directory.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_calculate_toolchain_sha1.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_apply_gate_settings.cmake:10 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_finalize.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_load_from_cache.cmake:4 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_download.cmake:22 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/projects/GTest/hunter.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:62 (include)[m
+[31m-  CMakeLists.txt:24 (hunter_add_package)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_make_directory.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_calculate_toolchain_sha1.cmake:6 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_apply_gate_settings.cmake:10 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_finalize.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_load_from_cache.cmake:4 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_download.cmake:22 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/projects/GTest/hunter.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:62 (include)[m
+[31m-  CMakeLists.txt:24 (hunter_add_package)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_lock_directory.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_make_directory.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_calculate_toolchain_sha1.cmake:6 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_apply_gate_settings.cmake:10 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_finalize.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_load_from_cache.cmake:4 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_download.cmake:22 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/projects/GTest/hunter.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:62 (include)[m
+[31m-  CMakeLists.txt:24 (hunter_add_package)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_set_config_location.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_apply_gate_settings.cmake:13 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_finalize.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_load_from_cache.cmake:4 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_download.cmake:22 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/projects/GTest/hunter.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:62 (include)[m
+[31m-  CMakeLists.txt:24 (hunter_add_package)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_calculate_self.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_finalize.cmake:6 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_load_from_cache.cmake:4 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_download.cmake:22 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/projects/GTest/hunter.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:62 (include)[m
+[31m-  CMakeLists.txt:24 (hunter_add_package)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_apply_gate_settings.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_finalize.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_cache_run.cmake:6 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_load_from_cache.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_download.cmake:22 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/projects/GTest/hunter.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:62 (include)[m
+[31m-  CMakeLists.txt:24 (hunter_add_package)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_calculate_config_sha1.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_apply_gate_settings.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_finalize.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_cache_run.cmake:6 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_load_from_cache.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_download.cmake:22 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/projects/GTest/hunter.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:62 (include)[m
+[31m-  CMakeLists.txt:24 (hunter_add_package)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_lock_directory.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_calculate_config_sha1.cmake:9 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_apply_gate_settings.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_finalize.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_cache_run.cmake:6 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_load_from_cache.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_download.cmake:22 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/projects/GTest/hunter.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:62 (include)[m
+[31m-  CMakeLists.txt:24 (hunter_add_package)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_make_directory.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_calculate_config_sha1.cmake:10 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_apply_gate_settings.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_finalize.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_cache_run.cmake:6 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_load_from_cache.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_download.cmake:22 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/projects/GTest/hunter.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:62 (include)[m
+[31m-  CMakeLists.txt:24 (hunter_add_package)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_lock_directory.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_make_directory.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_calculate_config_sha1.cmake:10 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_apply_gate_settings.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_finalize.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_cache_run.cmake:6 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_load_from_cache.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_download.cmake:22 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/projects/GTest/hunter.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:62 (include)[m
+[31m-  CMakeLists.txt:24 (hunter_add_package)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_calculate_self.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_apply_gate_settings.cmake:9 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_finalize.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_cache_run.cmake:6 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_load_from_cache.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_download.cmake:22 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/projects/GTest/hunter.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:62 (include)[m
+[31m-  CMakeLists.txt:24 (hunter_add_package)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_lock_directory.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_calculate_toolchain_sha1.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_apply_gate_settings.cmake:10 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_finalize.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_cache_run.cmake:6 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_load_from_cache.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_download.cmake:22 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/projects/GTest/hunter.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:62 (include)[m
+[31m-  CMakeLists.txt:24 (hunter_add_package)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_make_directory.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_calculate_toolchain_sha1.cmake:6 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_apply_gate_settings.cmake:10 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_finalize.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_cache_run.cmake:6 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_load_from_cache.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_download.cmake:22 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/projects/GTest/hunter.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:62 (include)[m
+[31m-  CMakeLists.txt:24 (hunter_add_package)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_lock_directory.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_make_directory.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_calculate_toolchain_sha1.cmake:6 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_apply_gate_settings.cmake:10 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_finalize.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_cache_run.cmake:6 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_load_from_cache.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_download.cmake:22 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/projects/GTest/hunter.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:62 (include)[m
+[31m-  CMakeLists.txt:24 (hunter_add_package)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_set_config_location.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_apply_gate_settings.cmake:13 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_finalize.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_cache_run.cmake:6 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_load_from_cache.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_download.cmake:22 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/projects/GTest/hunter.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:62 (include)[m
+[31m-  CMakeLists.txt:24 (hunter_add_package)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_calculate_self.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_finalize.cmake:6 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_cache_run.cmake:6 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_load_from_cache.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_download.cmake:22 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/projects/GTest/hunter.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:62 (include)[m
+[31m-  CMakeLists.txt:24 (hunter_add_package)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_make_directory.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_create_cache_meta_directory.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_load_from_cache.cmake:6 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_download.cmake:22 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/projects/GTest/hunter.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:62 (include)[m
+[31m-  CMakeLists.txt:24 (hunter_add_package)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_lock_directory.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_make_directory.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_create_cache_meta_directory.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_load_from_cache.cmake:6 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_download.cmake:22 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/projects/GTest/hunter.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:62 (include)[m
+[31m-  CMakeLists.txt:24 (hunter_add_package)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_make_directory.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_create_cache_meta_directory.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_save_to_cache.cmake:4 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_download.cmake:26 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/projects/GTest/hunter.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:62 (include)[m
+[31m-  CMakeLists.txt:24 (hunter_add_package)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_lock_directory.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_make_directory.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_create_cache_meta_directory.cmake:5 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_save_to_cache.cmake:4 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_download.cmake:26 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/projects/GTest/hunter.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:62 (include)[m
+[31m-  CMakeLists.txt:24 (hunter_add_package)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_lock_directory.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_save_to_cache.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_download.cmake:26 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/projects/GTest/hunter.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:62 (include)[m
+[31m-  CMakeLists.txt:24 (hunter_add_package)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_make_directory.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_save_to_cache.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_download.cmake:26 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/projects/GTest/hunter.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:62 (include)[m
+[31m-  CMakeLists.txt:24 (hunter_add_package)[m
+[31m-[m
+[31m-[m
+[31m-CMake Deprecation Warning at /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_lock_directory.cmake:4 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-Call Stack (most recent call first):[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_make_directory.cmake:7 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_save_to_cache.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_download.cmake:26 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/projects/GTest/hunter.cmake:8 (include)[m
+[31m-  /home/bari/.hunter/_Base/Download/Hunter/0.23.308/23f1b5a/Unpacked/cmake/modules/hunter_add_package.cmake:62 (include)[m
+[31m-  CMakeLists.txt:24 (hunter_add_package)[m
+[31m-[m
+[31m-[m
+[31m--- [hunter] GTEST_ROOT: /home/bari/.hunter/_Base/23f1b5a/fb15dbb/bf2be25/Install (ver.: 1.11.0)[m
+[31m--- Configuring done (0.6s)[m
+[31m--- Generating done (0.0s)[m
+[31m--- Build files have been written to: /home/bari/YaQQrQ/workspace/projects/lab07/_builds[m
+[31m-bari@ubuntu24:~/YaQQrQ/workspace/projects/lab07$ cmake --build _builds[m
+[31m-[ 16%] Building CXX object CMakeFiles/print.dir/sources/print.cpp.o[m
+[31m-[ 33%] Linking CXX static library libprint.a[m
+[31m-[ 33%] Built target print[m
+[31m-[ 50%] Building CXX object CMakeFiles/check.dir/tests/test1.cpp.o[m
+[31m-[ 66%] Linking CXX executable check[m
+[31m-[ 66%] Built target check[m
+[31m-[ 83%] Building CXX object CMakeFiles/demo.dir/demo/main.cpp.o[m
+[31m-[100%] Linking CXX executable demo[m
+[31m-[100%] Built target demo[m
+[31m-bari@ubuntu24:~/YaQQrQ/workspace/projects/lab07$ cmake --build _builds --target test[m
+[31m-Running tests...[m
+[31m-Test project /home/bari/YaQQrQ/workspace/projects/lab07/_builds[m
+[31m-    Start 1: check[m
+[31m-1/1 Test #1: check ............................   Passed    0.00 sec[m
+[31m-[m
+[31m-100% tests passed, 0 tests failed out of 1[m
+[31m-[m
+[31m-Total Test time (real) =   0.00 sec[m
+[31m-bari@ubuntu24:~/YaQQrQ/workspace/projects/lab07$ ls -la $HOME/.hunter[m
+[31m-итого 12[m
+[31m-drwxrwxr-x  3 bari bari 4096 апр 17 22:47 .[m
+[31m-drwxr-x--- 20 bari bari 4096 апр 18 18:27 ..[m
+[31m-drwxrwxr-x  6 bari bari 4096 апр 18 18:18 _Base[m
+[31m-bari@ubuntu24:~/YaQQrQ/workspace/projects/lab07$ git clone https://github.com/cpp-pm/hunter $HOME/projects/hunter[m
+[31m-fatal: целевой путь «/home/bari/projects/hunter» уже существует и не является пустым каталогом.[m
+[31m-bari@ubuntu24:~/YaQQrQ/workspace/projects/lab07$ export HUNTER_ROOT=$HOME/projects/hunter[m
+[31m-bari@ubuntu24:~/YaQQrQ/workspace/projects/lab07$ rm -rf _builds[m
+[31m-bari@ubuntu24:~/YaQQrQ/workspace/projects/lab07$ cmake -H. -B_builds -DBUILD_TESTS=ON[m
+[31m-CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):[m
+[31m-  Compatibility with CMake < 3.5 will be removed from a future version of[m
+[31m-  CMake.[m
+[31m-[m
+[31m-  Update the VERSION argument <min> value or use a ...<max> suffix to tell[m
+[31m-  CMake that the project does not need compatibility with older versions.[m
+[31m-[m
+[31m-[m
+[31m--- The C compiler identification is GNU 13.3.0[m
+[31m--- The CXX compiler identification is GNU 13.3.0[m
+[31m--- Detecting C compiler ABI info[m
+[31m--- Detecting C compiler ABI info - done[m
+[31m--- Check for working C compiler: /usr/bin/cc - skipped[m
+[31m--- Detecting C compile features[m
+[31m--- Detecting C compile features - done[m
+[31m--- Detecting CXX compiler ABI info[m
+[31m--- Detecting CXX compiler ABI info - done[m
+[31m--- Check for working CXX compiler: /usr/bin/c++ - skipped[m
+[31m--- Detecting CXX compile features[m
+[31m--- Detecting CXX compile features - done[m
+[31m--- [hunter] Calculating Toolchain-SHA1[m
+[31m--- [hunter] Calculating Config-SHA1[m
+[31m--- [hunter] HUNTER_ROOT: /home/bari/projects/hunter[m
+[31m--- [hunter] [ Hunter-ID: xxxxxxx | Toolchain-ID: fb15dbb | Config-ID: d14f46d ][m
+[31m--- [hunter] GTEST_ROOT: /home/bari/projects/hunter/_Base/xxxxxxx/fb15dbb/d14f46d/Install (ver.: 1.15.2)[m
+[31m--- Found GTest: /home/bari/projects/hunter/_Base/xxxxxxx/fb15dbb/d14f46d/Install/lib/cmake/GTest/GTestConfig.cmake (found version "1.15.2")  [m
+[31m--- Configuring done (0.9s)[m
+[31m--- Generating done (0.0s)[m
+[31m--- Build files have been written to: /home/bari/YaQQrQ/workspace/projects/lab07/_builds[m
+[31m-bari@ubuntu24:~/YaQQrQ/workspace/projects/lab07$ cmake --build _builds[m
+[31m-[ 16%] Building CXX object CMakeFiles/print.dir/sources/print.cpp.o[m
+[31m-[ 33%] Linking CXX static library libprint.a[m
+[31m-[ 33%] Built target print[m
+[31m-[ 50%] Building CXX object CMakeFiles/check.dir/tests/test1.cpp.o[m
+[31m-[ 66%] Linking CXX executable check[m
+[31m-[ 66%] Built target check[m
+[31m-[ 83%] Building CXX object CMakeFiles/demo.dir/demo/main.cpp.o[m
+[31m-[100%] Linking CXX executable demo[m
+[31m-[100%] Built target demo[m
+[31m-bari@ubuntu24:~/YaQQrQ/workspace/projects/lab07$ cmake --build _builds --target test[m
+[31m-Running tests...[m
+[31m-Test project /home/bari/YaQQrQ/workspace/projects/lab07/_builds[m
+[31m-    Start 1: check[m
+[31m-1/1 Test #1: check ............................   Passed    0.00 sec[m
+[31m-[m
+[31m-100% tests passed, 0 tests failed out of 1[m
+[31m-[m
+[31m-Total Test time (real) =   0.00 sec[m
+[31m-bari@ubuntu24:~/YaQQrQ/workspace/projects/lab07$ cat $HUNTER_ROOT/cmake/configs/default.cmake[m
+[31m-# Copyright (c) 2013-2020, Ruslan Baratov, Rahul Sheth[m
+[31m-# All rights reserved.[m
+[31m-[m
+[31m-# Do not place header guards here[m
+[31m-[m
+[31m-# Set CMake variables:[m
+[31m-#   * HUNTER_${PACKAGE_NAME}_VERSION[m
+[31m-[m
+[31m-# Usage:[m
+[31m-#   hunter_default_version(Foo VERSION 1.0.0)[m
+[31m-#   hunter_default_version(Boo VERSION 1.2.3z)[m
+[31m-[m
+[31m-include(hunter_default_version)[m
+[31m-include(hunter_user_error)[m
+[31m-[m
+[31m-# NOTE: no names with spaces![m
+[31m-[m
+[31m-hunter_default_version(ARM_NEON_2_x86_SSE VERSION 1.0.0-p0)[m
+[31m-hunter_default_version(AllTheFlopsThreads VERSION 0.1-p0)[m
+[31m-hunter_default_version(Alut VERSION 1.1.0-469287b-p0)[m
+[31m-hunter_default_version(Android-Apk VERSION 1.1.14)[m
+[31m-hunter_default_version(Android-Build-Tools VERSION 27.0.3)[m
+[31m-hunter_default_version(Android-Google-Repository VERSION 58)[m
+[31m-hunter_default_version(Android-Modules VERSION 1.0.0)[m
+[31m-hunter_default_version(Android-SDK VERSION 0.0.6)[m
+[31m-hunter_default_version(Android-SDK-Platform-tools VERSION r28.0.0)[m
+[31m-hunter_default_version(Android-SDK-Tools VERSION 25.2.5)[m
+[31m-hunter_default_version(Android-Support-Repository VERSION 47)[m
+[31m-hunter_default_version(AngelScript VERSION 2.30-p0)[m
+[31m-hunter_default_version(ArrayFire VERSION 3.3.1-p0)[m
+[31m-hunter_default_version(Assimp VERSION 5.2.5-9519a62)[m
+[31m-hunter_default_version(Async++ VERSION 0.0.3-hunter)[m
+[31m-hunter_default_version(Avahi VERSION 0.6.31)[m
+[31m-hunter_default_version(BZip2 VERSION 1.0.8-p0)[m
+[31m-hunter_default_version(Beast VERSION 1.0.0-b84-hunter-0)[m
+[31m-[m
+[31m-if(MINGW)[m
+[31m-  # https://github.com/boostorg/build/issues/301[m
+[31m-  hunter_default_version(Boost VERSION 1.64.0)[m
+[31m-else()[m
+[31m-  hunter_default_version(Boost VERSION 1.83.0)[m
+[31m-endif()[m
+[31m-[m
+[31m-hunter_default_version(BoostCompute VERSION 0.5-p0)[m
+[31m-hunter_default_version(BoostProcess VERSION 0.5)[m
+[31m-hunter_default_version(BoringSSL VERSION 0.0.0-0f5ecd3a8-p0)[m
+[31m-hunter_default_version(Box2D VERSION 2.3.1-p0)[m
+[31m-hunter_default_version(CLAPACK VERSION 3.2.1)[m
+[31m-hunter_default_version(CLI11 VERSION 2.3.2)[m
+[31m-hunter_default_version(CURL VERSION 8.5.0-p0)[m
+[31m-hunter_default_version(CapnProto VERSION 0.7.0)[m
+[31m-hunter_default_version(Catch VERSION 2.13.9)[m
+[31m-hunter_default_version(Clang VERSION 6.0.1-p0)[m
+[31m-hunter_default_version(ClangToolsExtra VERSION 6.0.1) # Clang[m
+[31m-hunter_default_version(Comet VERSION 4.0.2)[m
+[31m-hunter_default_version(CppNetlib VERSION 0.10.1-hunter-3)[m
+[31m-hunter_default_version(CppNetlibUri VERSION 1.0.5-hunter)[m
+[31m-hunter_default_version(CreateLaunchers VERSION 0.2.1)[m
+[31m-hunter_default_version(CsvParserCPlusPlus VERSION 1.0.1)[m
+[31m-hunter_default_version(EGL-Registry VERSION 0.0.0-dc0b58d-p0)[m
+[31m-hunter_default_version(Eigen VERSION 3.4.0)[m
+[31m-hunter_default_version(Expat VERSION 2.2.9-p0)[m
+[31m-hunter_default_version(FLAC VERSION 1.3.4-p0)[m
+[31m-hunter_default_version(FP16 VERSION 0.0.0-febbb1c-p0)[m
+[31m-hunter_default_version(FakeIt VERSION 2.0.3)[m
+[31m-hunter_default_version(Fruit VERSION 3.1.1-p0)[m
+[31m-hunter_default_version(FunctionalPlus VERSION 0.2-p0)[m
+[31m-hunter_default_version(GPUImage VERSION 0.1.6-p9)[m
+[31m-hunter_default_version(GSL VERSION 2.1.0-p2)[m
+[31m-[m
+[31m-if(MSVC80)[m
+[31m-  hunter_default_version(GTest VERSION 1.7.0-hunter-6)[m
+[31m-else()[m
+[31m-  hunter_default_version(GTest VERSION 1.15.2)[m
+[31m-endif()[m
+[31m-[m
+[31m-hunter_default_version(HalideIR VERSION 0.0-32057b5-p0)[m
+[31m-hunter_default_version(HastyNoise VERSION 0.8.3)[m
+[31m-hunter_default_version(ICU VERSION 63.1-p5)[m
+[31m-hunter_default_version(IF97 VERSION 2.1.2)[m
+[31m-hunter_default_version(Igloo VERSION 1.1.1-hunter)[m
+[31m-hunter_default_version(IlmBase VERSION 2.5.1-p0)[m
+[31m-hunter_default_version(Imath VERSION 3.1.5)[m
+[31m-hunter_default_version(Immer VERSION 0.6.2-cf44615)[m
+[31m-hunter_default_version(Jpeg VERSION 9e-p0)[m
+[31m-hunter_default_version(JsonSpirit VERSION 0.0.4-hunter)[m
+[31m-hunter_default_version(KTX-Software VERSION 4.0.0-efc9f09-p0)[m
+[31m-hunter_default_version(KhronosDataFormat VERSION 1.3.1-1f8c852-p3)[m
+[31m-hunter_default_version(LAPACK VERSION 3.7.1)[m
+[31m-hunter_default_version(LLVM VERSION 13.0.1) # Clang[m
+[31m-hunter_default_version(LLVMCompilerRT VERSION 6.0.1) # Clang[m
+[31m-hunter_default_version(Lager VERSION 0.0.0-dbc1fde-p0)[m
+[31m-hunter_default_version(Leathers VERSION 0.1.8)[m
+[31m-hunter_default_version(Leptonica VERSION 1.74.2-p4)[m
+[31m-hunter_default_version(LibCDS VERSION 2.3.1)[m
+[31m-hunter_default_version(Libcxx VERSION 3.6.2) # Clang[m
+[31m-hunter_default_version(Libcxxabi VERSION 3.6.2) # Clang[m
+[31m-hunter_default_version(Libevent VERSION 2.1.8-p4)[m
+[31m-hunter_default_version(Libssh2 VERSION 1.9.0-p0)[m
+[31m-hunter_default_version(LodePNG VERSION 0.0.0-p1)[m
+[31m-hunter_default_version(Lua VERSION 5.3.5)[m
+[31m-hunter_default_version(MathFu VERSION 1.1.0-p0)[m
+[31m-hunter_default_version(Microsoft.GSL VERSION 2.0.0-p0)[m
+[31m-hunter_default_version(MySQL-client VERSION 6.1.9-p1)[m
+[31m-hunter_default_version(NASM VERSION 2.15.02)[m
+[31m-hunter_default_version(NLopt VERSION 2.5.0-p0)[m
+[31m-hunter_default_version(ONNX VERSION 1.4.1-p0)[m
+[31m-hunter_default_version(OpenAL VERSION 1.23.1)[m
+[31m-hunter_default_version(OpenBLAS VERSION 0.3.27)[m
+[31m-hunter_default_version(OpenCL VERSION 2022.01.04-p1)[m
+
